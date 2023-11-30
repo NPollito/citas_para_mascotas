@@ -1,12 +1,27 @@
 import styled from 'styled-components'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Form from './components/Form'
 import DataPet from './components/DataPet'
 
 function App() {
 
+  // guardar en localstorage
+  let citasInitials = JSON.parse(localStorage.getItem('citas'))
+  if (!citasInitials) {
+    citasInitials = []
+  }
+
   // Arreglo de citas
-  const [citas, setCitas] = useState([])
+  const [citas, setCitas] = useState(citasInitials)
+
+  //Use effect para realizar ciertas operaciones cuando el state cambie
+  useEffect(() => {
+    if (citasInitials) {
+      localStorage.setItem('citas', JSON.stringify(citas))
+    }else {
+      localStorage.setItem('citas', JSON.stringify([]))
+    }
+  }, [citas])
 
   // Crear cita
   const createCita = cita => {
