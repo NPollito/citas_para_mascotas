@@ -36,7 +36,7 @@ export const  Button = styled.button`
 
 export const InputContainer = styled.input`
     margin-top: 5px;
-    padding: 0 10px;
+    padding: 10px;
     width: 100%;
     height: ${({$heigth}) => $heigth && $heigth};
     background-color: #424669;
