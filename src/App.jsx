@@ -36,7 +36,7 @@ function App() {
   
   return (
     <Container>
-      <Title>Citas de Mascotas</Title>
+      <Title>Citas para Mascotas</Title>
       <ContainerData>
         <Form createCita={createCita}/>
         <DataPet citas={citas} deleteCita={deleteCita}/>

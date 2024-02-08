@@ -33,7 +33,7 @@ const ContainerCitas = styled(Container)`
     border-radius: 0 25px 25px 0;
 
     @media (max-width: 700px) {
-        border-radius: 25px;
+        border-radius: 0 0 25px 25px;
     }
 `
 
